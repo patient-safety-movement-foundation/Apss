@@ -5,6 +5,7 @@ import {
   Button,
   Text,
   Image,
+  WebView,
   View
 } from 'react-native';
 import {
@@ -22,21 +23,10 @@ class MainScreen extends Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          The Movement is not just about information, it is about action! By addressing new challenges and forming Actionable Patient Safety Solution (APSS) we believe we can reduce the number of preventable deaths in hospitals to ZERO by 2020.
-        </Text>
-        <Text style={styles.welcome}>
-          We currently have developed 13 APSS that are ready for download. Each year, new patient safety challenges are nominated and voted on at the Midyear Planning Meeting and become safety topics that are prominent at our annual Summit.
-        </Text>
-        <Image source={require('./images/dotman.png')} style={{width: 240, height: 240}} />
-        <Button
-          title="Go to Challenges"
-          onPress={() =>
-            navigate('Challenges')
-          }
-        />
-      </View>
+      <WebView
+        source={{uri: 'http://patientsafetymovement.org/challenges-solutions/actionable-patient-safety-solutions-apss/'}}
+        style={{marginTop: 20}}
+      />
     );
   }
 }
