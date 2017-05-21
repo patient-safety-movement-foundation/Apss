@@ -52,12 +52,7 @@ const styles = StyleSheet.create({
     textAlign: 'left',
     margin: 10,
     color: '#333'
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  }
 });
 
 class ChallengesScreen extends Component {
